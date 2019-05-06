@@ -1,5 +1,6 @@
 " .vimrc
 
+" * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 " Auto plugin installation found @
 " https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -11,11 +12,17 @@ endif
 " Specify directory for plugins
 call plug#begin('~/.vim/plugged')
 
-" Favourite colorscheme
-Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'                  " Favourite colorscheme
+
+Plug 'vim-airline/vim-airline'          " Status line pretty-upper
+
+Plug 'jiangmiao/auto-pairs'             " Auto pair insertion/deletion
+
+Plug 'octol/vim-cpp-enhanced-highlight' " C++ syntax awareness
 
 " Initialize plugin system
 call plug#end()
+" * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 " Use Vim defaults
 set nocompatible
@@ -27,6 +34,9 @@ filetype indent plugin on
 syntax on
 colo gruvbox
 set bg=dark
+
+" Airline settings
+let g:airline_powerline_fonts=1
 
 " If filetype-specific indenting is not enabled, keep same indent as line above
 set autoindent

@@ -19,4 +19,4 @@ export HISTCONTROL=ignoredups
 export HISTSIZE=1000
 
 # My viewtiful prompt
-PS1="[\[\033[1;36m\]\u\[\033[0m\]@\h] \W \[\033[1;37m\]$\[\033[0m\] "
+PS1="[\[\033[1;36m\]\u\[\033[0m\]@\h] \[\033[1;35m\]\W\[\033[0m\] $ "
