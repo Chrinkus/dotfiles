@@ -47,9 +47,18 @@ set ruler
 " Display line numbers
 set number
 
+" Display line at column 80
+"set colorcolumn=80
+
+" Alternative to colorcolumn @ 80
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
 " Indentation and tab settings
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 "set expandtab
 
+" Press Space to turn off highlighting and clear any message already displayed
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
