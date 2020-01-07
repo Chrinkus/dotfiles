@@ -56,10 +56,8 @@ set colorcolumn=81
 "match OverLength /\%81v.\+/
 
 " Indentation and tab settings
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-autocmd BufRead *.hpp,*.cpp,*.js,*.h,*.c set expandtab
+
+autocmd BufRead *.hpp,*.cpp,*.js set sw=4 sts=4 ts=4 et
 
 " Press Space to turn off highlighting and clear any message already displayed
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
