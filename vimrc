@@ -3,6 +3,7 @@
 " * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 " Auto plugin installation found @
 " https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+" NEED curl for this to work!! Will silently fail otherwise.
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
