@@ -14,6 +14,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'                  " Favourite colorscheme
+Plug 'joshdick/onedark.vim'		" Another sweet colorscheme
 
 Plug 'vim-airline/vim-airline'          " Status line pretty-upper
 
@@ -56,7 +57,7 @@ set colorcolumn=81
 "match OverLength /\%81v.\+/
 
 " Indentation and tab settings
-
+autocmd BufRead *.json, *.JSON, *.css, *.html set sw=4 sts=4 ts=4
 autocmd BufRead *.hpp,*.cpp,*.js set sw=4 sts=4 ts=4 et
 
 " Press Space to turn off highlighting and clear any message already displayed
