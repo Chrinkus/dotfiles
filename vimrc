@@ -43,6 +43,10 @@ let g:airline_powerline_fonts=1
 " If filetype-specific indenting is not enabled, keep same indent as line above
 set autoindent
 
+" Long line breaking behaviour
+set breakindent	" Line breaks will continue at the same indentation level
+set linebreak	" Line breaks will prefer to break on specific characters
+
 " Display cursor position on the last line of the screen
 set ruler
 
