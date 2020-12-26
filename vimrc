@@ -22,6 +22,8 @@ Plug 'jiangmiao/auto-pairs'             " Auto pair insertion/deletion
 
 Plug 'octol/vim-cpp-enhanced-highlight' " C++ syntax awareness
 
+Plug 'tikhomirov/vim-glsl'		" syntax highlighting for GLSL
+
 " Initialize plugin system
 call plug#end()
 " * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
