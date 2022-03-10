@@ -14,12 +14,17 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'                  " Favourite colorscheme
+Plug 'joshdick/onedark.vim'		" Another sweet colorscheme
 
 Plug 'vim-airline/vim-airline'          " Status line pretty-upper
 
 Plug 'jiangmiao/auto-pairs'             " Auto pair insertion/deletion
 
 Plug 'octol/vim-cpp-enhanced-highlight' " C++ syntax awareness
+
+Plug 'tikhomirov/vim-glsl'		" syntax highlighting for GLSL
+
+Plug 'alvan/vim-closetag'		" XML, HTML auto-closing
 
 " Initialize plugin system
 call plug#end()
@@ -38,6 +43,7 @@ set bg=dark
 
 " Airline settings
 let g:airline_powerline_fonts=1
+" Install 'fonts-powerline' package to display airline symbols
 
 if has("mac") || has("macunix")
     set guifont=Monaco\ for\ Powerline:h24
@@ -66,9 +72,24 @@ set colorcolumn=81
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%81v.\+/
 
-" Indentation and tab settings
+" Close_tag settings
+let g:closetag_filenames = '*.html,*.xml,*.ui'
 
-autocmd BufRead *.hpp,*.cpp,*.js,*.lua set sw=4 sts=4 ts=4 et
+" TAB abbreviations:
+" sw	shiftwidth
+" ts	tabstop
+" sts	softtabstop
+
+" GTK ui file settings
+augroup gtk_ui_settings " {
+	autocmd!
+	autocmd BufNewFile,BufRead *.ui set sw=4 sts=4 ts=4
+	autocmd BufNewFile,BufRead *.xml set sw=4 sts=4 ts=4
+augroup END " }
+
+" Indentation and tab settings
+autocmd FileType json, JSON, css, html, set sw=4 sts=4 ts=4
+autocmd FileType hpp, cpp, js set sw=4 sts=4 ts=4 et
 
 " Press Space to turn off highlighting and clear any message already displayed
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>

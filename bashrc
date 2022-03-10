@@ -23,5 +23,5 @@ alias l.='ls -d .* --color=auto'
 alias ll='ls -l --color=auto'
 
 # My viewtiful prompt
-PS1="[\u@\h \W] \$ "
-#PS1="[\[\033[1;36m\]\u\[\033[0m\]@\h] \[\033[1;37m\]\W\[\033[0m\] $ "
+#PS1="[\u@\h \W] \$ "
+PS1="[\[\033[1;36m\]\u\[\033[0m\]@\h] \[\033[1;37m\]\W\[\033[0m\] $ "
