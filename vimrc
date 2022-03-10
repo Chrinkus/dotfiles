@@ -39,6 +39,13 @@ set bg=dark
 " Airline settings
 let g:airline_powerline_fonts=1
 
+if has("mac") || has("macunix")
+    set guifont=Monaco\ for\ Powerline:h24
+elseif has("win32") || has("win64")
+    set guifont=Monaco\ for\ Powerline:h14:cANSI
+    set renderoptions=type:directx,renmode:5
+endif
+
 " If filetype-specific indenting is not enabled, keep same indent as line above
 set autoindent
 
@@ -61,7 +68,7 @@ set colorcolumn=81
 
 " Indentation and tab settings
 
-autocmd BufRead *.hpp,*.cpp,*.js set sw=4 sts=4 ts=4 et
+autocmd BufRead *.hpp,*.cpp,*.js,*.lua set sw=4 sts=4 ts=4 et
 
 " Press Space to turn off highlighting and clear any message already displayed
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
