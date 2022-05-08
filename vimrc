@@ -72,6 +72,10 @@ let g:closetag_filenames = '*.html,*.xml,*.ui'
 " sw	shiftwidth
 " ts	tabstop
 " sts	softtabstop
+" et	expand-tab
+
+" Defaults
+set sw=8 sts=8 ts=8 et
 
 " GTK ui file settings
 augroup gtk_ui_settings " {
@@ -81,8 +85,10 @@ augroup gtk_ui_settings " {
 augroup END " }
 
 " Indentation and tab settings
-autocmd FileType json, JSON, css, html, set sw=4 sts=4 ts=4
-autocmd FileType hpp, cpp, js set sw=4 sts=4 ts=4 et
+autocmd FileType json, JSON, md, css, html, hpp, cpp, js set sw=4 sts=4 ts=4
+
+" Tabs must be tabs
+autocmd FileType md, json, JSON set noet
 
 " Press Space to turn off highlighting and clear any message already displayed
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
