@@ -45,6 +45,13 @@ set bg=dark
 let g:airline_powerline_fonts=1
 " Install 'fonts-powerline' package to display airline symbols
 
+if has("mac") || has("macunix")
+    set guifont=Monaco\ for\ Powerline:h24
+elseif has("win32") || has("win64")
+    set guifont=Monaco\ for\ Powerline:h14:cANSI
+    set renderoptions=type:directx,renmode:5
+endif
+
 " If filetype-specific indenting is not enabled, keep same indent as line above
 set autoindent
 
