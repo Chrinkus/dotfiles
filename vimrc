@@ -92,10 +92,13 @@ augroup gtk_ui_settings " {
 augroup END " }
 
 " Indentation and tab settings
-autocmd FileType json, JSON, md, css, html, hpp, cpp, js set sw=4 sts=4 ts=4
+"autocmd FileType cpp,hpp,json,md,css,html,js set sw=4 sts=4 ts=4
+"autocmd FileType *.c,*.h,*.txt set sw=8 sts=8 ts=8
+autocmd FileType javascript setlocal sw=4 sts=4 ts=4
+"autocmd FileType javascript setlocal sw=4 sts=4 ts=4
 
 " Tabs must be tabs
-autocmd FileType md, json, JSON set noet
+autocmd FileType sh,md,json,txt set noet
 
 " Press Space to turn off highlighting and clear any message already displayed
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
